@@ -1,0 +1,345 @@
+@import 'https://fonts.googleapis.com/css?family=Exo+2:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=cyrillic,latin-ext';
+$colorpri:#2B353F; // azul fondo
+$colortwo : #EFEFEF; // gris
+$colortrere :#E0E2E3; // gris oscurito
+$colochat :#F8F8F8;
+$colorcerrar :#3ABA77;
+$colorchatclien :#F1FF7D;
+$colochatperosna:#DBDBDB;
+$colortxtarea:#FEFEFE;
+body{
+  font-family: 'Exo 2', sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: $colorpri;
+  position: relative;
+  .edit {
+      background: #fff;
+
+margin-top: 10px;
+border-radius: 4px 4px 0px 0px;
+  }
+}
+.top{
+  text-align: center;
+  color: #fff;
+}
+.chat-bg{
+  position: relative;
+  padding-top: 40px;
+  .burbuja-chat{
+    position: absolute;
+  background: #f8f8f8;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+  border-radius: 50px;
+  left: 40px;
+  top: 20px;
+  background-image: url("../img/avatar/avat1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-indent: -189px;
+  cursor: pointer;
+  &.-v{
+    top: 100px;
+      background-image: url("../img/avatar/avat2.png");
+  }
+  }
+  .cuerpo-chat{
+    // display: none;
+    background-color: #EFEFEF;
+    border-radius: 4px;
+    width:830px;
+    min-height: 500px;
+    margin: 0 auto;
+    display: block;
+    padding: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .header-chat{
+      font-size: 18px;
+      padding: 10px;
+      position: relative;
+      .cerrar{
+        color: #fff;
+        background-color: #3ABA78;
+        border-radius: 19px;
+        display: block;
+        width: 26px;
+        height: 26px;
+        text-align: center;
+        position: absolute;
+        right: -20px;
+        top: -2px;
+        text-decoration: none;
+        &:hover{
+          text-decoration: none;
+
+        }
+      }
+
+    }
+    .mensajes{
+      background-color:#f8f8f8;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 50px;
+      padding-bottom: 20px;
+      border-radius: 4px;
+      &.scroll{
+        height: 400px;
+        &::-webkit-scrollbar {
+          width: 8px;
+        }
+        &::-webkit-scrollbar-track {
+          // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+          border-radius: 6px;
+        }
+        &::-webkit-scrollbar-thumb {
+          border-radius: 6px;
+          // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+          background-color: #3ABA78;
+        }
+      }
+      .mensaje-autor{
+        margin-bottom: 24px;
+        width: 100%;
+        .avatar{
+          display: inline-block;
+          vertical-align: top;
+        }
+        .flecha-izquierda{
+          display: inline-block;
+          margin-right: -6px;
+          margin-top: 10px;
+          width: 0;
+          height: 0;
+          border-top: 12px solid transparent;
+          border-bottom: 10px solid transparent;
+          border-right: 15px solid #DBDBDB;
+        }
+        .contenido{
+          background-color: #DBDBDB;
+          border-radius: 4px;
+          // box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+          display: inline-block;
+          font-size: 12px;
+          padding: 15px;
+          vertical-align: top;
+          width: 80%;
+
+
+        }
+        .fecha{
+          color: #3ABA78;
+          font-style: italic;
+          font-size: 13px;
+          text-align: right;
+          margin-right: 15px;
+          margin-top: 5px;
+          span{
+            margin-right: 20px;
+          }
+        }
+      }
+      .mensaje-amigo{
+        margin-bottom: 24px;
+        width: 100%;
+        .contenido{
+          background-color:  #F1FF7D;
+          border-radius: 5px;
+          // box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+          display: inline-block;
+          font-size: 12px;
+          padding: 15px;
+          vertical-align: top;
+          width: 80%;
+
+        }
+        .flecha-derecha{
+          display: inline-block;
+          margin-left: -6px;
+          margin-top: 10px;
+          width: 0;
+          height: 0;
+          border-top: 12px solid transparent;
+          border-bottom:10px solid transparent;
+          border-left: 15px solid #F1FF7D;
+        }
+        .avatar{
+          display: inline-block;
+          vertical-align: top;
+        }
+        .fecha{
+          color: #3ABA78;
+          font-style: italic;
+          font-size: 13px;
+          text-align: left;;
+          margin-left: 15px;
+          margin-top: 5px;
+          span{
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+    .caja-mensaje{
+      position: relative;
+      .enriquecido{
+        position: absolute;
+        background: #F5F5F5;
+        width: 99px;
+        padding: 4px;
+        bottom: 130px;
+        left: 11px;
+        .cuadr{
+          display: inline-block;
+          padding: 6px;
+          text-align: center;
+          font-size: 13px;
+          b{
+            cursor: pointer;
+            &:hover{
+              color: #444;
+            }
+          }
+          .italic{
+            font-family: sans-serif;
+            font-style: italic;
+            cursor: pointer;
+            &:hover{
+              color: #444;
+            }
+          }
+          .subr{
+            text-decoration: underline;
+            cursor: pointer;
+            &:hover{
+              color: #444;
+            }
+
+          }
+          .color{
+            border-bottom: 1px solid #333;
+            cursor: pointer;
+            &:hover{
+              color: #444;
+            }
+
+          }
+        }
+      }
+
+    }
+    .form {
+      padding: 0;
+      position: relative;
+      .toolbar{
+        position: absolute;
+  bottom: 10px;
+  background: #f5f5f5;
+  left: 10px;
+  width: 138px;
+
+      }
+      textarea{
+        width: 97%;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    outline: 0px;
+    padding: 14px;
+    font-size: 13px;
+    height: 110px;
+    display: none;
+
+      }
+    }
+    .control-en{
+      padding: 10px;
+padding-top: 0px;
+width: 811px;
+background-color: #E0E2E3;
+margin-top: 0px;
+position: relative;
+      .file{
+        display: inline-block;
+        input[type="file"] {
+          display: none;
+        }
+        .custom-file-upload {
+          display: inline-block;
+          padding: 9px 12px;
+          cursor: pointer;
+          background: #2B4350;
+          color: #fff;
+          font-size: 15px;
+        }
+        .fa-subir{
+          background-image: url('../img/iconos/subir.png');
+          display: inline-block;
+          background-repeat: no-repeat;
+          width:11px;
+          height: 18px;
+          text-shadow: 0px 1px rgba(0,0,0,0.2);
+
+        }
+      }
+      .textap{
+        display: inline-block;
+        p{
+          font-size: 12px;
+          padding-left: 13px;
+
+        }
+      }
+      .barrsindd{
+        display: block;
+        margin-top: 10px;
+
+      }
+    }
+    .barrsindd{
+      text-align: right;
+      padding: 10px;
+       .enviar{
+        background: #3ABA77;
+        border-radius: 2px;
+        border: none;
+        color: #fff;
+        font-size: 14px;
+        text-shadow: 0px 1px rgba(0,0,0,0.2);
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        outline:0px;
+        cursor: pointer;
+        &:focus{
+          border: none;
+          outline:0px;
+        }
+        &:hover{
+            background: #3ABA77;
+        }
+      }
+    }
+  }
+}
+img.foto {
+  width: 76px;
+  margin: 10px;
+  margin-top: 0;
+}
+.pie{
+  text-align: center;
+  color: #fff;
+}
+.off{
+  display: none !important;
+}
+.sc-toolbar-container .sc-format-group{
+  margin-right: 0 !important;
+}
